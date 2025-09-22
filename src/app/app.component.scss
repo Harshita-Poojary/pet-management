@@ -1,0 +1,9 @@
+.app-container {
+   --dark-blue: #00008B;
+
+   padding: 50px;
+
+   .app-heading {
+      color: var(--dark-blue);
+   }
+}

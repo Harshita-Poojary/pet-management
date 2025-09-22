@@ -1,0 +1,36 @@
+.login-container {
+   --primary-color: #1976d2;
+   --primary-hover: #115293;
+   --disabled-color: #A9A9A9;
+   --white-color: #ffffff;
+
+   margin-top: 50px;
+
+   h2 {
+      font-weight: 500;
+   }
+
+   a {
+      color: var(--primary-color);
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+         color: var(--primary-hover);
+      }
+   }
+
+   .login-btn {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         background-color: var(--primary-hover);
+      }
+
+      &:disabled {
+         background-color: var(--disabled-color);
+         opacity: 0.7;
+      }
+   }
+}

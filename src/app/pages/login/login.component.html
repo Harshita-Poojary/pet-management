@@ -1,0 +1,39 @@
+<div class="d-flex align-items-center justify-content-center login-container">
+   <div class="row w-100">
+      <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+         <h2 class="text-center mb-4">Login</h2>
+         <form [formGroup]="loginForm">
+            <mat-form-field class="w-100 mb-3" 
+               subscriptSizing="dynamic" 
+               hideRequiredMarker>
+               <mat-label>Username</mat-label>
+               <input matInput [formControl]="usernameControl">
+               @if(usernameControl.hasError('required')) {
+               <mat-error>Please enter username</mat-error>
+               }
+            </mat-form-field>
+            <mat-form-field class="w-100 mb-3" 
+               subscriptSizing="dynamic" 
+               hideRequiredMarker>
+               <mat-label>Password</mat-label>
+               <input matInput [formControl]="passwordControl">
+               @if(passwordControl.hasError('required')) {
+               <mat-error>Please enter password</mat-error>
+               }
+            </mat-form-field>
+            <button mat-raised-button 
+               type="button" 
+               class="login-btn w-100" 
+               [disabled]="loginForm.invalid"
+               (click)="onSubmit()">
+               Login
+            </button>
+         </form>
+         <div class="text-end mt-2">
+            <a href="javascript:void(0)" rel="noopener noreferrer">
+               Sign up
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
